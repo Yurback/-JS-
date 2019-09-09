@@ -1,19 +1,30 @@
-
-
-function main(a,b) {
-    let a = 4, b=5;
-    console.log(this);
-    function sum() {
-        console.log(this);
-        function s() {
-            console.log(this);
-            return a + b
-        }
-       
-        return s();
+class Rectangel {
+    constructor(width = 20, height = width) {
+        this.width = width;
+        this.height = height;
     }
-    console.log(sum());
-} 
+    calcArea() {
+        return this.width * this.height;
+    }
+}
 
-main(4,5);
-main(5,5);
+
+let rect = new Rectangel();
+console.log(rect.calcArea());
+
+function up(a,b=0,c=0,) {
+    console.log(isNaN(a) || isNaN(b) || isNaN(c));
+    console.log(parseInt(b));
+    console.log();
+    return ((isNaN(a) || isNaN(b) || isNaN(c))  ) ? parseInt(a) + (parseInt(b) || 0) + parseInt(c) : a+b+c;
+}
+
+
+let g = [20,40,30], c=[10,"",20];
+
+
+console.log(up(10,"",1));
+
+// console.log(up(...g));
+
+// console.log(up(...c));
