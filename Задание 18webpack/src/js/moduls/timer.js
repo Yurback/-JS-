@@ -1,5 +1,6 @@
 function timer() {
-    let deadline = "2019-10-09 23:00:00";
+    let deadline = new Date(2019,8,15,0);
+    console.log(deadline);
     console.log(new Date(Date.parse(deadline)));
     console.log(new Date(Date.parse(deadline) - 1000 * 60 * 60 * 3));
     console.log(Date.parse(new Date()));

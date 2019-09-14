@@ -10,7 +10,7 @@ function calc() {
     totalValue.innerHTML = 0;
 
     persons.addEventListener('change', function () {
-        personsSum = +this.value;
+        personsSum = (+this.value == NaN)? 0 : +this.value;
         total = (daysSum * personsSum) * 4000;
 
         if (restDays.value == "") {
@@ -22,7 +22,7 @@ function calc() {
     })
 
     restDays.addEventListener('change', function () {
-        daysSum = +this.value;
+        daysSum = (+this.value == NaN)? 0 : +this.value;
         total = (daysSum * personsSum) * 4000;
 
         if (restDays.value == "") {
