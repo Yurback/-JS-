@@ -17,7 +17,7 @@
   "homepage": "https://github.com/Yurback/-JS-#readme",
   "devDependencies": {
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {},
   "description": ""
